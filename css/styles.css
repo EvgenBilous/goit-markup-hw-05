@@ -147,9 +147,11 @@ img {
 }
 
 .header-link:hover:after,
-.header-link:focus:after {
+.header-link:focus:after,
+.header-link.current:after {
   opacity: 1;
   transform: scale(1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
