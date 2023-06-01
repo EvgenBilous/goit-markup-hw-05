@@ -10,6 +10,7 @@
   --light-slate: #8e8f99;
   --green: #31d0aa;
   --animation-duration: 250 ms linear;
+  --dairy: #fcfcfc;
 }
 
 body {
@@ -70,6 +71,7 @@ img {
 .studio-soc-link:hover,
 .studio-soc-link:focus {
   background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-icon {
   fill: var(--cloud);
@@ -132,6 +134,7 @@ img {
   color: var(--navy-blue);
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:after {
@@ -153,6 +156,8 @@ img {
   opacity: 1;
   transform: scale(1);
   transition: var(--animation-duration);
+  bottom: -1px;
+  border-radius: 2px;
 }
 
 .header-link:hover,
@@ -174,6 +179,7 @@ img {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-link:hover,
@@ -282,6 +288,7 @@ div.scrollmenu {
   letter-spacing: 0.04em;
   color: var(--white);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover {
   background-color: var(--ocean);
@@ -690,6 +697,8 @@ div.scrollmenu {
   align-items: center;
   justify-content: center;
   color: var(--light-slate);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -726,6 +735,7 @@ div.scrollmenu {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
@@ -738,25 +748,29 @@ div.scrollmenu {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   z-index: 100;
-  transition: opacity var(--animation-duration) visibility
-    var(--animation-duration);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
   position: absolute;
   width: 408px;
-  height: 584px;
-  background-color: #fff;
+  min-height: 584px;
+  background-color: var(--dairy);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-modal-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 24px;
+  right: 24px;
   display: flex;
   background: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -767,6 +781,9 @@ div.scrollmenu {
   justify-content: center;
   align-items: center;
   padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button-icon {
   color: var(--navy-blue);
@@ -775,10 +792,11 @@ div.scrollmenu {
 .close-modal-button:hover .close-button-icon,
 .close-modal-button:focus .close-button-icon {
   fill: var(--white);
+  border: none;
 }
 
 .close-button-icon {
-  transition: var(--animation-duration);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-button:hover,
