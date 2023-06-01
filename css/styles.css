@@ -9,7 +9,7 @@
   --slate: #434455;
   --light-slate: #8e8f99;
   --green: #31d0aa;
-  --animation-duration: 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250 ms linear;
 }
 
 body {
@@ -740,6 +740,8 @@ div.scrollmenu {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
+  transition: opacity var(--animation-duration) visibility
+    var(--animation-duration);
 }
 
 .modal {
@@ -782,4 +784,9 @@ div.scrollmenu {
 .close-modal-button:hover,
 .close-modal-button:focus {
   background: var(--ocean);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
