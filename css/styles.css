@@ -151,7 +151,7 @@ img {
 .header-link.current:after {
   opacity: 1;
   transform: scale(1);
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -476,6 +476,35 @@ div.scrollmenu {
   background-color: var(--cloud);
 }
 
+/**----PORTFOLIO-----**/
+.photo-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.card-link:hover,
+.card-link:focus .photo-overlay {
+  transform: translate(0, 0);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  background-color: var(--iris);
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  overflow-y: scroll;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.card-link:hover .photo-overlay {
+  transform: translate(0, 0);
+}
 .card-photo {
   width: calc((100% - 48px) / 3);
   background-color: var(--white);
