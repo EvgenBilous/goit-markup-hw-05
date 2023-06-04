@@ -147,7 +147,7 @@ img {
   opacity: 0;
   transform: scale(0);
   background: var(--ocean);
-  transition: transform 250ms linear;
+  transition: transform 250ms linear, opacity 250ms linear;
   bottom: -1px;
   border-radius: 2px;
 }
